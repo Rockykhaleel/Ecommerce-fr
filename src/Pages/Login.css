@@ -1,0 +1,112 @@
+.button {
+    display: inline-block !important;
+    width: 100% !important;
+    height: 50px !important;
+    border-radius: 25px !important;
+    /* border: 1px solid #ff0084 !important; */
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.5s ease-in !important;
+    z-index: 1 !important;
+   }
+   
+   .button::before,
+   .button::after {
+    content: '';
+    position: absolute !important;
+    top: 0 !important;
+    width: 0 !important;
+    height: 100% !important;
+    transform: skew(15deg) !important;
+    transition: all 0.5s !important;
+    overflow: hidden !important;
+    z-index: -1 !important;
+   }
+   
+   .button::before {
+    left: -10px !important;
+    background: #FF2599 !important;
+   }
+   
+   .button::after {
+    right: -10px !important;
+    background: #FF79C0 !important;
+   }
+   
+   .button:hover::before,
+   .button:hover::after {
+    width: 58% !important;
+   }
+   
+   .button:hover span {
+    color: #e0aaff !important;
+    transition: 0.3s !important;
+   }
+   
+   .button span {
+    color: #03045e !important;
+    font-size: 18px !important;
+    transition: all 0.3s ease-in !important;
+   }
+   a{
+    text-decoration: none;
+    color: #fff;
+   }
+   .login-htmll{
+    width: 100%;
+    height: 525px !important;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(0, 0, 0, 0.5);
+   }
+   .login-htmll .sign-in-htm,
+  .login-htmll .for-pwd-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  .login-htmll .sign-in,
+  .login-htmll .for-pwd,
+  .login-form .group .check {
+    display: none;
+  }
+  .login-htmll .tab,
+  .login-form .group .label,
+  .login-form .group .button {
+    text-transform: uppercase;
+  }
+  .login-htmll .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+  }
+  .login-htmll .sign-in:checked + .tab,
+  .login-htmll .for-pwd:checked + .tab {
+    color: #fff;
+    border-color: #1161ee;
+  }
+  .login-htmll
+    .sign-in:checked
+    + .tab
+    + .for-pwd
+    + .tab
+    + .login-form
+    .sign-in-htm {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  .login-htmll .for-pwd:checked + .tab + .login-form .for-pwd-htm {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
